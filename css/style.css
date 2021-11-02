@@ -57,8 +57,8 @@ body {
 }
 
 .stats {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   border-top: 1.5px solid hsla(0, 0%, 59%, 0.2);
   padding: 30px 50px;
   margin-top: 30px;
@@ -74,6 +74,16 @@ body {
 .stats p:nth-child(even) {
   letter-spacing: 2px;
   font-size: 0.6rem;
+}
+
+.stats div:first-child {
+  justify-self: left;
+  position: relative;
+  right: 7px;
+}
+
+.stats div:last-child {
+  justify-self: right;
 }
 
 @media (max-width: 425px) {
